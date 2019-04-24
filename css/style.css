@@ -10,3 +10,12 @@ nav{
     background-image: url("../imgs/nav_guest_background.jpg");
 
 }
+.meniu{
+    height: 550px;
+}
+.ekranas
+{
+    border: 25px solid;
+    border-image-source: linear-gradient(45deg, rgb(29, 143, 134), rgb(250,224,66));
+    border-image-slice: 1;
+}
