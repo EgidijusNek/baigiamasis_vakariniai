@@ -1,5 +1,7 @@
 <?php
+include "session.php";
 include "check_login.php";
+
 include "header.php";
 ?>
 
@@ -9,7 +11,7 @@ include "header.php";
     <div class="row">
         <div class="col-4 offset-4">
 
-            <form  method="post">
+            <form action="login.php" method="post">
                 <!-- emailas -->
                 <div class="form-group">
                     <label>Email address</label>
@@ -30,7 +32,6 @@ include "header.php";
         </div>
     </div>
 
-1
 </div>
 
 <?php
