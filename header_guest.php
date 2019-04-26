@@ -13,7 +13,7 @@
                 <a class="nav-link" href="#">Tuščias</a>
             </li>
         </ul></div>
-    <div class="col-3"><button type="button" class="btn btn-primary " >Prisijungti</button>
+    <div class="col-3"><a href="login.php" class="btn btn-primary " >Prisijungti</a>
         <button type="button" class="btn btn-warning ">Registruotis</button></div>
         </nav>
 
