@@ -6,7 +6,13 @@ include "header_online.php";
             <main class="row">
                 <div class="col-1 mt-4 meniu"></div>
     <div class="col-2 bg-primary mt-4 meniu">Gyvūno valdymo meniu</div>
-                <div class="col-8 mt-4 ekranas meniu">Pagrindinis ekranas</div>
+<!--                Pagrindinis ekranas-->
+                <div class="col-8 mt-4 ekranas meniu">
+                <div class="row">
+                    <div class="col-7 bg-primary">info</div>
+                    <div class="col-5 bg-danger">foto <img src="https://cdn.pixabay.com/photo/2014/04/02/14/09/dino-306331_960_720.png" class="foto_pvz" alt=""></div>
+                </div>
+                </div>
                 <div class="col-1 mt-4 meniu"></div>
 
 
