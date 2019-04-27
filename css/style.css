@@ -19,3 +19,7 @@ nav{
     border-image-source: linear-gradient(45deg, rgb(29, 143, 134), rgb(250,224,66));
     border-image-slice: 1;
 }
+.foto_pvz {
+    height: 400px;
+    width: auto;
+}
