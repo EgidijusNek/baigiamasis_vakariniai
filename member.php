@@ -5,7 +5,61 @@ include "header_online.php";
         <div class="container-fluid">
             <main class="row">
                 <div class="col-1 mt-4 meniu"></div>
-    <div class="col-2 bg-primary mt-4 meniu">Gyvūno valdymo meniu</div>
+
+
+    <div class=" col bg-primary mt-4 meniu" >
+        <div class="row" style="border: 3px solid navy;text-align: center;"><strong >Gyvūno valdymo meniu</strong></div>
+        <br>
+
+        <div class="container" >
+
+            <div class="row">
+                <div class="col- fas fa-utensils">
+                    <a href=""><button type="button" class="btn btn-dark">Valgyti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-bath">
+                    <a href=""><button type="button" class="btn btn-dark">Praustis</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-bed">
+                    <a href=""><button type="button" class="btn btn-dark"> Miegoti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-gamepad">
+                    <a href=""><button type="button" class="btn btn-dark">Žaisti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-first-aid">
+                    <a href=""><button type="button" class="btn btn-dark">Gydyti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-weight">
+                    <a href=""><button type="button" class="btn btn-dark">Svoris</button></a>
+
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+
+    </div>
 <!--                Pagrindinis ekranas-->
                 <div class="col-8 mt-4 ekranas meniu">
                 <div class="row">
