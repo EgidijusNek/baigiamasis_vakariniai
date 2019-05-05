@@ -23,3 +23,9 @@ nav{
     height: 400px;
     width: auto;
 }
+footer  {
+    background-color: darkslateblue;
+    color: white;
+    margin-top: 500px;
+
+}
