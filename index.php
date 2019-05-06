@@ -5,14 +5,14 @@ include "header.php";
 include "carousel.php";
 ?>
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-    </div>
+</div>
 
 
-    <main class="">
+<main class="">
 
-    </main>
+</main>
 
 <?php
 include "footer.php";

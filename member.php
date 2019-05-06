@@ -20,7 +20,7 @@ else if(count($result) > 0)
 if(!empty($test))
     $petActual = $pets->retPet($test);
 else
-    header('Location: ./createPet.php');
+    header('Location: /createPet.php');
 
 $_SESSION["idPet"] = $petActual['idPet'];
 
@@ -34,22 +34,22 @@ if(isset($_POST['delete'])){
 
 
 /** minigame valdymas */
-//$game = new Minigame();
-//$resGame = $game->showMinigames($petActual['idPet']);
-//
-//if(isset($_POST['petM']) && isset($_POST['minigameActual'])){
-//    $idP = $_POST['petM'];
-//    $idM = $_POST['minigameActual'];
-//}
-//
-//if(!empty($idP) && !empty($idM)){
-//    if($idM == 'Akmuo - Popierius - Zirkles'){
-//        header("Location: minigames/akmuo-popierius-zirkles.php?idP=$idP");
-//    }
-//    else if($idM == 'Kryžiukai-Nuliukai'){
-//        header("Location: minigames/kryziukai-nuliukai.php?idP=$idP");
-//    }
-//}
+$game = new Minigame();
+$resGame = $game->showMinigames($petActual['idPet']);
+
+if(isset($_POST['petM']) && isset($_POST['minigameActual'])){
+    $idP = $_POST['petM'];
+    $idM = $_POST['minigameActual'];
+}
+
+if(!empty($idP) && !empty($idM)){
+    if($idM == 'Akmuo - Popierius - Zirkles'){
+        header("Location: minigames/akmuo-popierius-zirkles.php?idP=$idP");
+    }
+    else if($idM == 'Kryžiukai-Nuliukai'){
+        header("Location: minigames/kryziukai-nuliukai.php?idP=$idP");
+    }
+}
 
 $listRanking = $game->ranking();
 
@@ -57,14 +57,19 @@ $listRanking = $game->ranking();
 /** maistas */
 if(isset($_POST['petHungry'])){
     if(isset($_POST['Rabbit'])){
-        $pets->feed($_POST['Whiskas'], $_POST['petHungry']);
+        $pets->feed($_POST['Rabbit'], $_POST['petHungry']);
     }
     else if(isset($_POST['Mouse'])){
         $pets->feed($_POST['Mouse'], $_POST['petHungry']);
     }
-
-    else if(isset($_POST['Pedigree'])){
-        $pets->feed($_POST['Pedigree'], $_POST['petHungry']);
+    else if(isset($_POST['Bird'])){
+        $pets->feed($_POST['Bird'], $_POST['petHungry']);
+    }
+    else if(isset($_POST['Fruit'])){
+        $pets->feed($_POST['Fruit'], $_POST['petHungry']);
+    }
+    else if(isset($_POST['Bug'])){
+        $pets->feed($_POST['Bug'], $_POST['petHungry']);
     }
 }
 
@@ -84,11 +89,7 @@ if(isset($_POST['cure']) && isset($_POST['petIDCure']))
         <div class="container-fluid">
             <main class="row">
                 <div class="col-1 mt-4 meniu"></div>
-<<<<<<< Updated upstream
-    <div class="col-2 bg-primary mt-4 meniu">Gyvūno valdymo meniu</div>
-=======
     <?php include "gyvuno_valdymo_meniu.php";?>
->>>>>>> Stashed changes
 <!--                Pagrindinis ekranas-->
                 <div class="col-8 mt-4 ekranas meniu">
                 <div class="row">
@@ -150,7 +151,73 @@ if(isset($_POST['cure']) && isset($_POST['petIDCure']))
                                 </tbody>
                             </table>
 
-
+<!--                            <table class="table" align="center" style="width: 80%; margin-top: 8%;">-->
+<!--                                <thead class="table-dark">-->
+<!--                                <tr>-->
+<!--                                    <th scope="col">-->
+<!---->
+<!--                                        --><?php //if($petActual['petState'] == 'dormindo'){ ?>
+<!--                                            <a disabled class="btn btn-outline-danger rounded-circle disabled" role="button">-->
+<!--                                                <i class="fas fa-utensils"></i>-->
+<!--                                            </a>-->
+<!--                                        --><?php //} else{ ?>
+<!--                                            <a onmousedown="btnsMenu.play()" id="alimentar" class="btn btn-outline-danger rounded-circle" role="button" href="#lista-comidas" data-toggle="modal">-->
+<!--                                                <i class="fas fa-utensils"></i>-->
+<!--                                            </a>-->
+<!--                                        --><?php //} ?>
+<!--                                    </th>-->
+<!--                                    <th scope="col">-->
+<!--                                        <form action="listagem-pet.php" method="post">-->
+<!--                                            <input type="hidden" id="banho" name="banho"></input>-->
+<!--                                            <input type="hidden" id="petID" name="petID" value="--><?//=$petActual['idPet'];?><!--"></input>-->
+<!--                                            <button onmousedown="btnBanho.play()" type="submit" class="btn btn-outline-primary rounded-circle">-->
+<!--                                                <i class="fas fa-shower"></i>-->
+<!--                                            </button>-->
+<!--                                        </form>-->
+<!--                                    </th>-->
+<!--                                    <th scope="col">-->
+<!--                                        --><?php //if($petActual['petState'] == 'dormindo'){ ?>
+<!--                                            <a class="btn btn-outline-success rounded-circle disabled" role="button">-->
+<!--                                                <i class="fas fa-gamepad"></i>-->
+<!--                                            </a>-->
+<!--                                        --><?php //} else{ ?>
+<!--                                            <a onmousedown="btnsMenu.play()" id="minigame" class="btn btn-outline-success rounded-circle"  role="button" href="#lista-minigames" data-toggle="modal">-->
+<!--                                                <i class="fas fa-gamepad"></i>-->
+<!--                                            </a>-->
+<!--                                        --><?php //} ?>
+<!--                                    </th>-->
+<!--                                    <th scope="col">-->
+<!--                                        <form action="listagem-pet.php" method="post">-->
+<!--                                            <input type="hidden" id="dormir" name="dormir"></input>-->
+<!--                                            <input type="hidden" id="petIDDormir" name="petIDDormir" value="--><?//=$petActual['idPet'];?><!--"></input>-->
+<!--                                            --><?php //if($petActual['petState'] == 'dormindo'){?>
+<!--                                                <button onmousedown="btnNS.play()" type="submit" class="btn btn-outline-warning rounded-circle">-->
+<!--                                                    <i class="fas fa-sun"></i>-->
+<!--                                                </button>-->
+<!--                                            --><?php //} else{?>
+<!--                                                <button onmousedown="btnNS.play()" type="submit" class="btn btn-outline-info rounded-circle">-->
+<!--                                                    <i class="fas fa-bed"></i>-->
+<!--                                                </button>-->
+<!--                                            --><?php //} ?>
+<!--                                        </form>-->
+<!--                                    </th>-->
+<!--                                    <th scope="col">-->
+<!--                                        <form action="listagem-pet.php" method="post">-->
+<!--                                            <input type="hidden" id="cura" name="cura"></input>-->
+<!--                                            <input type="hidden" id="petIDCura" name="petIDCura" value="--><?//=$petActual['idPet'];?><!--"></input>-->
+<!--                                            <button onmousedown="btnNS.play()" type="submit" class="btn btn-outline-danger rounded-circle">-->
+<!--                                                <i class="fas fa-syringe"></i>-->
+<!--                                            </button>-->
+<!--                                        </form>-->
+<!--                                    </th>-->
+<!--                                    <th scope="col">-->
+<!--                                        <a onmousedown="btnsMenu.play()" name="peso" class="btn btn-outline-info rounded-circle" role="button" href="#peso" data-toggle="modal">-->
+<!--                                            <i class="fas fa-weight"></i>-->
+<!--                                        </a>-->
+<!--                                    </th>-->
+<!--                                </tr>-->
+<!--                                </thead>-->
+<!--                            </table>-->
                         </div>
                     </div>
 
@@ -158,7 +225,7 @@ if(isset($_POST['cure']) && isset($_POST['petIDCure']))
                     </div>
                     <div class="col-5 bg-danger">foto
                         <div class="">
-                            <img src="imgs/<?=$petActual['image']?>" />
+                            <img src="images/<?=$petActual['image']?>" />
                         </div>
 
                     </div>

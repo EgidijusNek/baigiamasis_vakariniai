@@ -20,12 +20,11 @@
             <li class="nav-item">
                 <a href="#show-pets" class="btn btn-md btn-primary mr-1" data-toggle="modal">Keisti Gyvūną</a>
             </li>
-<!--            <li class="nav-item">-->
-<!--                <a class="btn btn-md btn-info" href="#ranking" data-toggle="modal">Žaidimų Rezultatai</a>-->
-<!--            </li>-->
+            <li class="nav-item">
+                <a class="btn btn-md btn-info" href="#ranking" data-toggle="modal">Žaidimų Rezultatai</a>
+            </li>
         </ul></div>
-    <div class="col-3">
-<!--        <button type="button" class="btn btn-md btn-secondary" >Pranešimai <span class="badge badge-light">?</span></button>-->
+    <div class="col-3"><button type="button" class="btn btn-md btn-secondary" >Pranešimai <span class="badge badge-light">?</span></button>
         <a class="btn btn-md btn-danger" href="logout.php">Atsijungti</a>
         </div>
 </nav>
@@ -46,7 +45,7 @@
             </div>
             <div class="modal-body">
                 <?php foreach($result as $name){ ?>
-                    <form action="member.php" method="post">
+                    <form action="./member.php" method="post">
                         <input type="hidden" id="petActual" name="petActual" value="<?=$name['idPet'];?>">
                         <?php if($name['idPet'] % 2 == 0){?>
                             <button type="submit" class="btn btn-primary">
@@ -116,40 +115,40 @@
 </div>
 
 <!-- Modalas žaidimai -->
-<!--<div class="modal fade" id="list-minigames" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header" style="background-color: green; color: white;">-->
-<!--                <h4 class="modal-title" id="modalLabel">Žaidimai</h4>-->
-<!--                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                    <span aria-hidden="true">&times;</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                --><?php
-//                foreach($resGame as $minigame){
-//                    $idP = $minigame['idPet'];
-//                    $idM = $minigame['nameMinigame'];
-//                    ?>
-<!--                    <form action="member.php" method="post">-->
-<!--                        <input type="hidden" id="petM" name="petM" value="--><?//=$minigame['idPet']?><!--"-->
-<!--                        <input type="hidden" id="minigameActual" name="minigameActual" value="--><?//=$minigame['nameMinigame']?><!--"</input>-->
-<!--                        --><?php //if($idM == 'Kryžiukai Nuliukai'){?>
-<!--                            <button type="submit" class="btn btn-outline-success">-->
-<!--                                <img src="https://png.icons8.com/dusk/40/000000/hashtag.png">-->
-<!--                            </button>-->
-<!--                        --><?php //} else {?>
-<!--                            <button type="submit" class="btn btn-outline-primary">-->
-<!--                                <img src="https://png.icons8.com/ultraviolet/40/000000/star-trek-gesture.png">-->
-<!--                            </button>-->
-<!--                        --><?php //}?>
-<!--                    </form>-->
-<!--                    <br><br>-->
-<!--                --><?php //} ?>
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal fade" id="list-minigames" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: green; color: white;">
+                <h4 class="modal-title" id="modalLabel">Žaidimai</h4>
+                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?php
+                foreach($resGame as $minigame){
+                    $idP = $minigame['idPet'];
+                    $idM = $minigame['nameMinigame'];
+                    ?>
+                    <form action="member.php" method="post">
+                        <input type="hidden" id="petM" name="petM" value="<?=$minigame['idPet']?>"
+                        <input type="hidden" id="minigameActual" name="minigameActual" value="<?=$minigame['nameMinigame']?>"</input>
+                        <?php if($idM == 'Kryžiukai Nuliukai'){?>
+                            <button type="submit" class="btn btn-outline-success">
+                                <img src="https://png.icons8.com/dusk/40/000000/hashtag.png">
+                            </button>
+                        <?php } else {?>
+                            <button type="submit" class="btn btn-outline-primary">
+                                <img src="https://png.icons8.com/ultraviolet/40/000000/star-trek-gesture.png">
+                            </button>
+                        <?php }?>
+                    </form>
+                    <br><br>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modalas Maistas -->
 <div class="modal fade" id="show-food" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
