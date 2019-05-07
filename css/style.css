@@ -1,7 +1,10 @@
 
 main{
     height: 400px;
+
 }
+
+
 .nav-link{
     color: white;
     font-size: 20px;
@@ -39,3 +42,76 @@ footer  {
      padding-right: 42%;
 
  }
+.mainPageCarousel {
+    background: black;
+
+    height: 70vh;
+    min-height:500px;
+}
+
+
+#mainPageCarousel .carousel-inner,
+#mainPageCarousel .carousel-item,
+#mainPageCarousel .carousel-item img {
+
+
+    height: 100%;
+}
+#mainPageCarousel .carousel-item img{
+
+    height: 50%;
+
+    object-fit: cover;
+    opacity: 0.6;
+    /* permatomos foto */
+}
+
+#mainPageCarousel span[class=carousel-control] {
+
+
+    background:none;
+    font-size: 1,5em;
+
+}
+
+#mainPageCarousel .carousel-caption {
+
+
+    text-align: left;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    border-left: 2px solid #00b1f5;
+    padding-left: 2em;
+
+}
+
+/* teksto formatavimas */
+
+
+#mainPageCarousel .carousel-caption h4 {
+    color: red;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+
+}
+
+#mainPageCarousel .carousel-caption a {
+
+    color: rgb(97, 46, 46);
+
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2em;
+
+}
+
+.about {
+    text-align: center;
+    font-size: 30px;
+}
+.about h3 {
+
+}
