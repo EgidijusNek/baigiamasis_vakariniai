@@ -20,11 +20,11 @@
             <li class="nav-item">
                 <a href="#show-pets" class="btn btn-md btn-primary mr-1" data-toggle="modal">Keisti Gyvūną</a>
             </li>
-            <li class="nav-item">
-                <a class="btn btn-md btn-info" href="#ranking" data-toggle="modal">Žaidimų Rezultatai</a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="btn btn-md btn-info" href="#ranking" data-toggle="modal">Žaidimų Rezultatai</a>-->
+<!--            </li>-->
         </ul></div>
-    <div class="col-3"><button type="button" class="btn btn-md btn-secondary" >Pranešimai <span class="badge badge-light">?</span></button>
+<!--    <div class="col-3"><button type="button" class="btn btn-md btn-secondary" >Pranešimai <span class="badge badge-light">?</span></button>-->
         <a class="btn btn-md btn-danger" href="logout.php">Atsijungti</a>
         </div>
 </nav>
@@ -70,85 +70,85 @@
     </div>
 </div>
 <!--Modal Žaidimų Rezultatai-->
-<div class="modal fade" id="ranking" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-warning" style="color: white;">
-                <h4 class="modal-title" id="modalLabel">Žaidimų Rezultatai</h4>
-                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table class="table" align="center"  style="text-align: center;">
-                    <thead class="table-dark">
-                    <tr>
-                        <th scope="col">Vieta</th>
-                        <th scope="col">Vartotojo ID</th>
-                        <th scope="col">Gyvūnas</th>
-                        <th scope="col">Žaidimas</th>
-                    </tr>
-                    </thead>
-                    <?php $i = 1; foreach($listRanking as $item){ ?>
-                        <tbody>
-                        <tr>
-                            <th>
-                                <?php echo $i; ?>
-                            </th>
-                            <th>
-                                <?= $item['UserId']; ?>
-                            </th>
-                            <th>
-                                <?=  $item['namePet']; ?>
-                            </th>
-                            <th>
-                                <?=  $item['nameMinigame']; ?>
-                            </th>
-                        </tr>
-                        </tbody>
-                        <?php $i++;} ?>
-                </table>
-                <br><br>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modalas žaidimai -->
-<div class="modal fade" id="list-minigames" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: green; color: white;">
-                <h4 class="modal-title" id="modalLabel">Žaidimai</h4>
-                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <?php
-                foreach($resGame as $minigame){
-                    $idP = $minigame['idPet'];
-                    $idM = $minigame['nameMinigame'];
-                    ?>
-                    <form action="member.php" method="post">
-                        <input type="hidden" id="petM" name="petM" value="<?=$minigame['idPet']?>"
-                        <input type="hidden" id="minigameActual" name="minigameActual" value="<?=$minigame['nameMinigame']?>"</input>
-                        <?php if($idM == 'Kryžiukai Nuliukai'){?>
-                            <button type="submit" class="btn btn-outline-success">
-                                <img src="https://png.icons8.com/dusk/40/000000/hashtag.png">
-                            </button>
-                        <?php } else {?>
-                            <button type="submit" class="btn btn-outline-primary">
-                                <img src="https://png.icons8.com/ultraviolet/40/000000/star-trek-gesture.png">
-                            </button>
-                        <?php }?>
-                    </form>
-                    <br><br>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal fade" id="ranking" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header bg-warning" style="color: white;">-->
+<!--                <h4 class="modal-title" id="modalLabel">Žaidimų Rezultatai</h4>-->
+<!--                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <table class="table" align="center"  style="text-align: center;">-->
+<!--                    <thead class="table-dark">-->
+<!--                    <tr>-->
+<!--                        <th scope="col">Vieta</th>-->
+<!--                        <th scope="col">Vartotojo ID</th>-->
+<!--                        <th scope="col">Gyvūnas</th>-->
+<!--                        <th scope="col">Žaidimas</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    --><?php //$i = 1; foreach($listRanking as $item){ ?>
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!--                            <th>-->
+<!--                                --><?php //echo $i; ?>
+<!--                            </th>-->
+<!--                            <th>-->
+<!--                                --><?//= $item['UserId']; ?>
+<!--                            </th>-->
+<!--                            <th>-->
+<!--                                --><?//=  $item['namePet']; ?>
+<!--                            </th>-->
+<!--                            <th>-->
+<!--                                --><?//=  $item['nameMinigame']; ?>
+<!--                            </th>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                        --><?php //$i++;} ?>
+<!--                </table>-->
+<!--                <br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!--<Modalas žaidimai -->
+<!--<div class="modal fade" id="list-minigames" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header" style="background-color: green; color: white;">-->
+<!--                <h4 class="modal-title" id="modalLabel">Žaidimai</h4>-->
+<!--                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                --><?php
+//                foreach($resGame as $minigame){
+//                    $idP = $minigame['idPet'];
+//                    $idM = $minigame['nameMinigame'];
+//                    ?>
+<!--                    <form action="member.php" method="post">-->
+<!--                        <input type="hidden" id="petM" name="petM" value="--><?//=$minigame['idPet']?><!--"-->
+<!--                        <input type="hidden" id="minigameActual" name="minigameActual" value="--><?//=$minigame['nameMinigame']?><!--"</input>-->
+<!--                        --><?php //if($idM == 'Kryžiukai Nuliukai'){?>
+<!--                            <button type="submit" class="btn btn-outline-success">-->
+<!--                                <img src="https://png.icons8.com/dusk/40/000000/hashtag.png">-->
+<!--                            </button>-->
+<!--                        --><?php //} else {?>
+<!--                            <button type="submit" class="btn btn-outline-primary">-->
+<!--                                <img src="https://png.icons8.com/ultraviolet/40/000000/star-trek-gesture.png">-->
+<!--                            </button>-->
+<!--                        --><?php //}?>
+<!--                    </form>-->
+<!--                    <br><br>-->
+<!--                --><?php //} ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <!-- Modalas Maistas -->
 <div class="modal fade" id="show-food" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -162,11 +162,11 @@
             </div>
             <div class="modal-body">
                 <form action="member.php" method="post">
-                    <button type="submit" class="btn btn-outline-info" id="Rabbit" name="Rabbit" value="Triušis"><img src="https://png.icons8.com/office/40/000000/rabbit.png"></button>
-                    <button type="submit" class="btn btn-outline-success" id="Mouse" name="Mouse" value="Pelė"><img src="https://png.icons8.com/color/40/000000/animation.png"></button>
-                    <button type="submit" class="btn btn-outline-warning" id="Bird" name="Bird" value="Paukštis"><img src="https://png.icons8.com/color/40/000000/bird.png"></button>
-                    <button type="submit" class="btn btn-outline-danger" id="Fruit" name="Fruit" value="Vaisius"><img src="https://png.icons8.com/color/40/000000/strawberry.png"></button>
-                    <button type="submit" class="btn btn-outline-dark" id="Bug" name="Bug" value="Vabalas"><img src="https://png.icons8.com/color/40/000000/insect.png"></button>
+                    <button type="submit" class="btn btn-outline-info" id="Whiskas" name="Whiskas" value="Whiskas"><img src="imgs/whiskas.jpeg"></button>
+                    <button type="submit" class="btn btn-outline-success" id="Mouse" name="Mouse" value="Pelė"><img src="imgs/mouse.png"></button>
+<!--                    <button type="submit" class="btn btn-outline-warning" id="Bird" name="Bird" value="Paukštis"><img src="https://png.icons8.com/color/40/000000/bird.png"></button>-->
+<!--                    <button type="submit" class="btn btn-outline-danger" id="Fruit" name="Fruit" value="Vaisius"><img src="https://png.icons8.com/color/40/000000/strawberry.png"></button>-->
+                    <button type="submit" class="btn btn-outline-dark" id="Pedigree" name="Pedigree" value="Pedigree"><img src="imgs/pedigree.jpg"></button>
                     <input type="hidden" id="petHungry" name="petHungry" value="<?=$petActual['idPet'];?>"
                 </form>
                 <br><br>

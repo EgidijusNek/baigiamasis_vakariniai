@@ -10,7 +10,7 @@ include "header.php";
         <h1>Susikurk paskyrą!</h1>
         <p>Užpildyk žemiau esančius laukelius ir galėsi susikurti savo virtualų augintinį!</p>
 
-        <form action="register.php" method="post" class="form-horizontal registracijos_forma">
+        <form action="register.php" method="post" class="form-horizontal registracijos_forma form-control">
             <div class="form-group">
                 <input type="text" class="form-control" id="inputUser" name="user" placeholder="Vartotojo vardas" required>
             </div>
