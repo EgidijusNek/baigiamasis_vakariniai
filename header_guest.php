@@ -5,12 +5,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php">Pirmas</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Apie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tuščias</a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Apie</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Tuščias</a>-->
+<!--            </li>-->
         </ul>
     </div>
     <div class="col-3">
@@ -20,7 +20,7 @@
         <a href="login.php" class="btn btn-primary ">Prisijungti</a>
         <?php }; ?>
 
-        <button type="button" class="btn btn-warning ">Registruotis</button>
+        <a href="register.php" type="button" class="btn btn-warning ">Registruotis</a>
     </div>
 </nav>
 

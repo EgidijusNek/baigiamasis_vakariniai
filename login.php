@@ -1,39 +1,29 @@
 <?php
-include "session.php";
-include "check_login.php";
-
+require 'php/userClass.php';
+$users=new User();
+$users->login();
 include "header.php";
 ?>
 
+    <main class="container-fluid">
+        <div class="jumbotron text-center registracijos_forma">
+            <h1>Prisijunk!</h1>
+            <p>Augink ir prižiūrėk savo virtualius augintinius</p>
 
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="col-4 offset-4">
-
-            <form action="login.php" method="post">
-                <!-- emailas -->
+            <form action="login.php" method="post" class="form-signin registracijos_forma">
                 <div class="form-group">
-                    <label>Email address</label>
-                    <input type="text" name="email" class="form-control">
-
+                    <input type="text" class="form-control" name="user" placeholder="Vartotojo vardas" required autofocus>
                 </div>
-
-                <!-- slaptazodis -->
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control">
+                    <input type="password" class="form-control" name="password" placeholder="Slaptažodis" required>
                 </div>
-
-                <!-- prisijungti mygtukas -->
-                <button type="submit" class="btn btn-primary">Prisijungti</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    <span class=""></span> Prisijungti!
+                </button>
             </form>
-
         </div>
-    </div>
 
-</div>
+    </main>
 
 <?php
 include "footer.php";
-?>
