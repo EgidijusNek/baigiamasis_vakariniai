@@ -10,7 +10,7 @@ include "header.php";
             <h1>Prisijunk!</h1>
             <p>Augink ir prižiūrėk savo virtualius augintinius</p>
 
-            <form action="login.php" method="post" class="form-signin registracijos_forma">
+            <form action="login.php" method="post" class="form-signin registracijos_forma login">
                 <div class="form-group">
                     <input type="text" class="form-control" name="user" placeholder="Vartotojo vardas" required autofocus>
                 </div>
