@@ -5,12 +5,12 @@ $users->login();
 include "header.php";
 ?>
 
-    <main class="container-fluid">
+    <main class="container-fluid login">
         <div class="jumbotron text-center registracijos_forma">
             <h1>Prisijunk!</h1>
             <p>Augink ir prižiūrėk savo virtualius augintinius</p>
 
-            <form action="login.php" method="post" class="form-signin registracijos_forma login">
+            <form action="login.php" method="post" class="form-signin  ">
                 <div class="form-group">
                     <input type="text" class="form-control" name="user" placeholder="Vartotojo vardas" required autofocus>
                 </div>

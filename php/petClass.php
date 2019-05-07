@@ -6,8 +6,8 @@ class Pet{
     protected $db = array(
         'host'=>'localhost',
         'database'=>'virtual-pet-db',
-        'user'=>'root',
-        'password'=>'',
+        'user'=>'tadas19_db',
+        'password'=>'1234',
     );
 
     public function __construct(){

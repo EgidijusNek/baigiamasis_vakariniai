@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 // jei sesija neegzistuoja tai pradedam
 if (!isset($_SESSION))

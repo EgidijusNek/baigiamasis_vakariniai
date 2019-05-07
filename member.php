@@ -230,16 +230,58 @@ include 'modals.php';
                                 </tr>
                                 </tbody>
                             </table>
+        <div class="container-fluid">
+            <main class="row">
+                <div class="col-1 mt-4 meniu"></div>
+
+
+    <div class=" col bg-primary mt-4 meniu" >
+        <div class="row" style="border: 3px solid navy;text-align: center;"><strong >Gyvūno valdymo meniu</strong></div>
+        <br>
+
+        <div class="container" >
+
+            <div class="row">
+                <div class="col- fas fa-utensils">
+                    <a href=""><button type="button" class="btn btn-dark">Valgyti</button></a>
 
                 </div>
-
-
-
-
-                <div class="col-5">foto <img src="imgs/<?=$petActual['image']?>" alt="virtualus augintinis"></div>
             </div>
-        </div>
-        <div class="col-1 mt-4 meniu"></div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-bath">
+                    <a href=""><button type="button" class="btn btn-dark">Praustis</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-bed">
+                    <a href=""><button type="button" class="btn btn-dark"> Miegoti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-gamepad">
+                    <a href="final/index.html"><button type="button" class="btn btn-dark">Žaisti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-first-aid">
+                    <a href=""><button type="button" class="btn btn-dark">Gydyti</button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col- fas fa-weight">
+                    <a href=""><button type="button" class="btn btn-dark">Svoris</button></a>
+
+                </div>
+                <div class="col-1 mt-4 meniu"></div>
 
 
     </main>

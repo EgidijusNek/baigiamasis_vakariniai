@@ -4,8 +4,8 @@ class User{
     protected $db = array(
         'host'=>'localhost',
         'database'=>'virtual-pet-db',
-        'user'=>'root',
-        'password'=>'',
+        'user'=>'tadas19_db',
+        'password'=>'1234',
     );
 
 
@@ -82,7 +82,7 @@ class User{
 
     protected function conectDB(){
         $this->mysql = new PDO(
-            'mysql:host='.$this->db['host'].';dbname='.$this->db['database'], $this->db['user'], $this->db['password']
+            'mysql:host='.$this->db['host'].';dbname='.$this->db['database'].";port=3307", $this->db['user'], $this->db['password']
         );
         $this->mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

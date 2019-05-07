@@ -3,6 +3,8 @@ include "session.php";
 
 include "header.php";
 include "carousel.php";
+
+
 ?>
 
 <div class="container-fluid">
