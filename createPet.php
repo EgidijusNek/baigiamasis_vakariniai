@@ -20,7 +20,7 @@ $idPet = $pets->retIDPet();
 //    $game->createMinigame($idPet);
 
 if(array_key_exists('create' ,$_POST))
-    printf('<script>document.location="http://gyvuno.kurimas/member.php"</script>');
+    printf('<script>document.location="http://baigiamasis.darbas/member.php"</script>');
 
 //    header('Location: ./member.php');
 

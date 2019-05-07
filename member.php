@@ -1,5 +1,4 @@
 <?php
-include 'header_online.php';
 require 'php/userClass.php';
 require 'php/petClass.php';
 
@@ -51,7 +50,7 @@ if(isset($_POST['sleep']) && isset($_POST['petIDSleep']))
 
 if(isset($_POST['cure']) && isset($_POST['petIDCure']))
     $pets->cure($_POST['petIDCure']);
-
+include 'header_online.php';
 include 'modals.php';
 ?>
 
@@ -68,7 +67,7 @@ include 'modals.php';
 
                 <div class="row">
                     <th scope="col">
-                    <?php if($petActual['statePet'] == 'sleeping'){ ?>
+                    <?php if($petActual['petState'] == 'sleeping'){ ?>
                         <a disabled class="btn disabled" role="button">
                             <i class="fas fa-utensils"></i>
                         </a>
@@ -106,7 +105,7 @@ include 'modals.php';
                         <form action="member.php" method="post">
                             <input type="hidden" id="sleep" name="sleep"></input>
                             <input type="hidden" id="petIDSleep" name="petIDSleep" value="<?=$petActual['idPet'];?>"></input>
-                            <?php if($petActual['statePet'] == 'dormindo'){?>
+                            <?php if($petActual['petState'] == 'dormindo'){?>
                                 <button type="submit" class="btn btn-dark">
                                     <i class="fas fa-sun"></i>
                                 </button>
@@ -225,7 +224,7 @@ include 'modals.php';
                                             <?php } ?>
                                         </div>
                                     </td>
-                                    <td style="font-weight: bold; font-style: italic;"> <?php echo $petActual['statePet']; ?></td>
+                                    <td style="font-weight: bold; font-style: italic;"> <?php echo $petActual['petState']; ?></td>
                                     <td style="font-weight: bold;"> <?php echo $petActual['age']; ?></td>
                                     <?php// } ?>
                                 </tr>
