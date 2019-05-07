@@ -15,7 +15,7 @@ class Pet{
     }
 
     public function showPets(){
-        $id = $_SESSION["id_user"];
+        $id = $_SESSION["id_user"]??0;
         $sql = "SELECT * FROM pet WHERE idUser = $id";
         $mysql=$this->mysql->prepare($sql);
         $mysql->execute();
@@ -205,8 +205,7 @@ class Pet{
             $mysql->execute();
             header('Location: ./member.php');
             $this->controlsGeneral($idPet);
-        }
-        else{
+        } else {
             echo "<script type='text/javascript'>alert('Ei! Aš jau esu švarus!');javascript:window.location='member.php';</script>";
         }
 
@@ -215,7 +214,7 @@ class Pet{
 
     public function controlsGeneral($idPet){
         $time = time();
-        $Dtime = $time - $_SESSION["time"];
+        $Dtime = $time - $_SESSION["time"]??0;
 
         $sql = "SELECT petState FROM pet WHERE idPet = $idPet";
         $mysql = $this->mysql->prepare($sql);
@@ -331,7 +330,7 @@ class Pet{
             $queryNew="UPDATE pet, minigames SET pet.petHealth = 50, pet.petHappiness = 50, pet.petHunger = 50, pet.petSleep = 50, petState = 'normal', pet.age = 0, pet.weight = 1, pet.image = 'bb.gif', minigames.score = 0 WHERE pet.idPet = $idPet AND minigames.idPet = $idPet AND minigames.nameMinigame = 'Kryziukai Nuliukai'";
             $mysql=$this->mysql->prepare($queryNew);
             $mysql->execute();
-            echo "<script type='text/javascript'>alert('Deja Tavo augintinis numirė! Netrukus jis bus sukurtas iš naujo, o žaidimo rezultatai atstatyti į pradinius!');javascript:window.location='member.php';</script>";
+//            echo "<script type='text/javascript'>alert('Deja Tavo augintinis numirė! Netrukus jis bus sukurtas iš naujo, o žaidimo rezultatai atstatyti į pradinius!');javascript:window.location='member.php';</script>";
         }
     }
 
