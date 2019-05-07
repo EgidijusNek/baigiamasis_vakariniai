@@ -47,14 +47,20 @@ class User{
         $mysql->execute();
         session_unset();
         session_destroy();
+//        printf('<script>document.location="http://baigiamasis.darbas/index.php"</script>');
+
         header('Location: ./index.php');
     }
 
     public function protect(){
         session_start();
-        if (empty($_SESSION["user"])) {
+        if
+//        (array_key_exists('user', $_SESSION))
+        (empty($_SESSION["user"]))
+        {
             $_SESSION["url"]=$_SERVER['REQUEST_URI'];
-            header('Location: ./login.php');
+            printf('<script>document.location="http://baigiamasis.darbas/login.php"</script>');
+
         }
     }
 
